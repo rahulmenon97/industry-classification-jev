@@ -1,0 +1,142 @@
+[
+  {
+    "case_id": "salesforce",
+    "company_name": "Salesforce",
+    "reference_domain": "salesforce.com",
+    "cohort": "established",
+    "description": "Salesforce supplies cloud-based customer relationship management applications and related tools that help organizations manage customer-facing work. Its platform also incorporates AI agents and business data.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://www.salesforce.com/company/our-story/",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "linear",
+    "company_name": "Linear",
+    "reference_domain": "linear.app",
+    "cohort": "startup_scaleup",
+    "description": "Linear develops a software product that helps teams plan, coordinate, and deliver product development work. It provides a shared system for organizing work across teams and agents.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://linear.app/about",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "boeing",
+    "company_name": "Boeing",
+    "reference_domain": "boeing.com",
+    "cohort": "established",
+    "description": "Boeing develops, manufactures, and services commercial airplanes, defense products, and space systems. Its businesses include commercial aircraft, defense and space, and related services.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://www.boeing.com/company",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "boom",
+    "company_name": "Boom Supersonic",
+    "reference_domain": "boomsupersonic.com",
+    "cohort": "startup_scaleup",
+    "description": "Boom Supersonic is developing the Overture supersonic airliner and its Symphony engine. Its work centers on creating aircraft and propulsion technology for future passenger travel.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://boomsupersonic.com/company",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "coca_cola",
+    "company_name": "The Coca-Cola Company",
+    "reference_domain": "coca-colacompany.com",
+    "cohort": "established",
+    "description": "The Coca-Cola Company is a beverage business with a portfolio that includes soft drinks, water, sports drinks, coffee, and tea. It develops and markets beverage brands within a broader bottling and distribution system.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://www.coca-colacompany.com/about-us",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "liquid_death",
+    "company_name": "Liquid Death",
+    "reference_domain": "liquiddeath.com",
+    "cohort": "startup_scaleup",
+    "description": "Liquid Death markets packaged drinks including still water, sparkling water, iced tea, and energy drinks. It also sells branded merchandise.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://liquiddeath.com/",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "visa",
+    "company_name": "Visa",
+    "reference_domain": "visa.com",
+    "cohort": "established",
+    "description": "Visa operates a digital payments network connecting consumers, merchants, financial institutions, and other organizations. It facilitates payments through its network and related technology services.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://corporate.visa.com/en/about-visa.html",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "modern_treasury",
+    "company_name": "Modern Treasury",
+    "reference_domain": "moderntreasury.com",
+    "cohort": "startup_scaleup",
+    "description": "Modern Treasury provides payment infrastructure that helps businesses move and track money. Its platform offers an API spanning bank-based payments and stablecoins, with related ledger capabilities.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://www.moderntreasury.com/about",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "pfizer",
+    "company_name": "Pfizer",
+    "reference_domain": "pfizer.com",
+    "cohort": "established",
+    "description": "Pfizer is a biopharmaceutical business that develops and supplies medicines and vaccines. Its work includes scientific research and the development of treatments for disease.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://www.pfizer.com/about",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "case_id": "formation_bio",
+    "company_name": "Formation Bio",
+    "reference_domain": "formation.bio",
+    "cohort": "startup_scaleup",
+    "description": "Formation Bio acquires clinical-stage drug assets and develops potential treatments. It uses a proprietary technology and AI platform to improve the drug development process.",
+    "description_type": "curated_paraphrase_of_official_source_not_exa_output",
+    "sources": [
+      {
+        "url": "https://www.formation.bio/",
+        "checked_on": "2026-09-27"
+      }
+    ]
+  }
+]

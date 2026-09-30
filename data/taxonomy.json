@@ -1,0 +1,1027 @@
+{
+  "version": "industry-demo-2.1",
+  "synthetic": true,
+  "classification_policy": "Classify the primary activity supported by the evidence. All ancestor conditions and exclusions apply. Use an explicit diversified category only when supported. If competing activities cannot be resolved, use insufficient_evidence. If the activity is clear but no leaf fits, use outside_taxonomy. Internal technology use does not determine industry. Evaluate the target at company scope. Prefer a supported explicit diversified path when several substantial businesses span specialist categories. Do not infer primary activity from text order, repeated keywords, or one prominently discussed division.",
+  "inheritance_policy": "Child scope narrows its parent; inherit every ancestor condition and exclusion. Derive parent IDs and industry code after selecting the leaf.",
+  "industry_code_policy": "Synthetic fixed six-digit strings, scoped to taxonomy version; not official industry codes. No cross-version code equivalence is implied. Abstentions have no code.",
+  "nodes": [
+    {
+      "id": "financial_services",
+      "tier": 1,
+      "parent_id": null,
+      "name": "Financial Services",
+      "description": "Provides financial services or dedicated infrastructure for financial transactions.",
+      "exclusions": "General-purpose software belongs to Technology. A deposit-taking business belongs to Banking before Lending."
+    },
+    {
+      "id": "healthcare",
+      "tier": 1,
+      "parent_id": null,
+      "name": "Healthcare and Life Sciences",
+      "description": "Provides patient care, medical treatments, devices, testing, or biological research products.",
+      "exclusions": "Software-only tools for healthcare belong to Technology; internal use of AI does not change industry."
+    },
+    {
+      "id": "industrials",
+      "tier": 1,
+      "parent_id": null,
+      "name": "Industrials",
+      "description": "Develops industrial equipment or provides construction, engineering, transportation, or logistics services.",
+      "exclusions": "Consumer products and computing hardware belong to their respective sectors."
+    },
+    {
+      "id": "consumer_goods",
+      "tier": 1,
+      "parent_id": null,
+      "name": "Consumer Goods",
+      "description": "Develops, produces, or markets physical products or brands for personal or household consumption.",
+      "exclusions": "Exclude retailers merely reselling others\u2019 brands, restaurants, and hotels."
+    },
+    {
+      "id": "technology",
+      "tier": 1,
+      "parent_id": null,
+      "name": "Technology",
+      "description": "Supplies computing products, reusable software, or IT services to external customers.",
+      "exclusions": "Dedicated payment infrastructure belongs to Financial Services; internal use of technology alone does not qualify."
+    },
+    {
+      "id": "banking",
+      "tier": 2,
+      "parent_id": "financial_services",
+      "name": "Banking",
+      "description": "Accepts deposits and supplies banking services.",
+      "exclusions": "Non-deposit lenders belong to Lending."
+    },
+    {
+      "id": "retail_banking",
+      "tier": 3,
+      "parent_id": "banking",
+      "name": "Retail Banking",
+      "description": "Primarily serves individuals with deposit accounts and everyday banking.",
+      "exclusions": "Exclude business-focused banks and banks explicitly operating broad retail and corporate divisions.",
+      "industry_code": "000001",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "commercial_banking",
+      "tier": 3,
+      "parent_id": "banking",
+      "name": "Commercial Banking",
+      "description": "Primarily supplies deposit and banking services to businesses.",
+      "exclusions": "Exclude retail-focused banks and broad universal banks.",
+      "industry_code": "000002",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "universal_banking",
+      "tier": 3,
+      "parent_id": "banking",
+      "name": "Universal Banking",
+      "description": "Explicitly operates substantial retail and corporate or investment banking divisions.",
+      "exclusions": "Do not infer a universal business from a generic bank description.",
+      "industry_code": "000003",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "lending",
+      "tier": 2,
+      "parent_id": "financial_services",
+      "name": "Lending",
+      "description": "Supplies credit as a non-deposit-taking lender.",
+      "exclusions": "Exclude deposit-taking banks and brokers that do not extend credit."
+    },
+    {
+      "id": "consumer_lending",
+      "tier": 3,
+      "parent_id": "lending",
+      "name": "Consumer Lending",
+      "description": "Extends personal, installment, auto, or point-of-sale credit to individuals.",
+      "exclusions": "Residential mortgages belong to Mortgage Lending.",
+      "industry_code": "000004",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "business_lending",
+      "tier": 3,
+      "parent_id": "lending",
+      "name": "Business Lending",
+      "description": "Extends credit or equipment financing to business borrowers.",
+      "exclusions": "Exclude consumer loans and deposit-taking banks.",
+      "industry_code": "000005",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "mortgage_lending",
+      "tier": 3,
+      "parent_id": "lending",
+      "name": "Mortgage Lending",
+      "description": "Primarily originates or funds residential mortgage loans.",
+      "exclusions": "Exclude mortgage listing sites and referral-only brokers.",
+      "industry_code": "000006",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "payments",
+      "tier": 2,
+      "parent_id": "financial_services",
+      "name": "Payments",
+      "description": "Enables payment acceptance, processing, transfer, or operational tracking.",
+      "exclusions": "Exclude businesses merely accepting payment for unrelated products."
+    },
+    {
+      "id": "payment_networks",
+      "tier": 3,
+      "parent_id": "payments",
+      "name": "Payment Networks",
+      "description": "Operates a network or scheme connecting payment participants and institutions.",
+      "exclusions": "Exclude merchant-focused processors and payment operations platforms.",
+      "industry_code": "000007",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "merchant_payment_processing",
+      "tier": 3,
+      "parent_id": "payments",
+      "name": "Merchant Payment Processing",
+      "description": "Primarily enables merchants to accept and process customer payments.",
+      "exclusions": "Exclude network operators and general treasury or money-movement orchestration.",
+      "industry_code": "000008",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "payment_operations_platforms",
+      "tier": 3,
+      "parent_id": "payments",
+      "name": "Payment Operations Platforms",
+      "description": "Provides dedicated APIs or platforms for business money movement, reconciliation, or payment ledgers.",
+      "exclusions": "Exclude merchant checkout-focused processing and payment network operators.",
+      "industry_code": "000009",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "insurance",
+      "tier": 2,
+      "parent_id": "financial_services",
+      "name": "Insurance",
+      "description": "Underwrites insurance risks or intermediates insurance products.",
+      "exclusions": "Insurance software without underwriting or brokerage belongs to Technology."
+    },
+    {
+      "id": "life_health_insurance",
+      "tier": 3,
+      "parent_id": "insurance",
+      "name": "Life and Health Insurance",
+      "description": "Primarily underwrites life, annuity, or health coverage.",
+      "exclusions": "Exclude property/casualty underwriting and intermediaries.",
+      "industry_code": "000010",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "property_casualty_insurance",
+      "tier": 3,
+      "parent_id": "insurance",
+      "name": "Property and Casualty Insurance",
+      "description": "Primarily underwrites property, auto, liability, or other casualty risks.",
+      "exclusions": "Exclude life/health underwriting and intermediaries.",
+      "industry_code": "000011",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "insurance_brokerage",
+      "tier": 3,
+      "parent_id": "insurance",
+      "name": "Insurance Brokerage",
+      "description": "Arranges insurance coverage between customers and insurers.",
+      "exclusions": "Exclude businesses primarily bearing underwriting risk.",
+      "industry_code": "000012",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "investment_services",
+      "tier": 2,
+      "parent_id": "financial_services",
+      "name": "Investment Services",
+      "description": "Manages investments, executes securities transactions, or supplies investment banking services.",
+      "exclusions": "Exclude deposit-led banking businesses."
+    },
+    {
+      "id": "asset_management",
+      "tier": 3,
+      "parent_id": "investment_services",
+      "name": "Asset Management",
+      "description": "Manages pooled funds or investment portfolios on behalf of investors.",
+      "exclusions": "Exclude execution-focused brokers and deal-advisory firms.",
+      "industry_code": "000013",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "securities_brokerage",
+      "tier": 3,
+      "parent_id": "investment_services",
+      "name": "Securities Brokerage",
+      "description": "Primarily provides securities trading access and transaction execution.",
+      "exclusions": "Exclude portfolio-management-led businesses.",
+      "industry_code": "000014",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "investment_banking",
+      "tier": 3,
+      "parent_id": "investment_services",
+      "name": "Investment Banking",
+      "description": "Primarily advises on mergers, capital raising, or securities underwriting.",
+      "exclusions": "Exclude universal banks and retail trading platforms.",
+      "industry_code": "000015",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "care_providers",
+      "tier": 2,
+      "parent_id": "healthcare",
+      "name": "Care Providers",
+      "description": "Directly delivers clinical care to patients.",
+      "exclusions": "Exclude insurers, laboratories providing only testing, and software vendors."
+    },
+    {
+      "id": "hospitals",
+      "tier": 3,
+      "parent_id": "care_providers",
+      "name": "Hospitals",
+      "description": "Operates inpatient hospitals and associated acute-care facilities.",
+      "exclusions": "Exclude outpatient-only clinics.",
+      "industry_code": "000016",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "outpatient_care",
+      "tier": 3,
+      "parent_id": "care_providers",
+      "name": "Outpatient Care",
+      "description": "Operates non-dental clinics or practices delivering care without inpatient admission.",
+      "exclusions": "Exclude hospitals, dental practices, and standalone testing laboratories.",
+      "industry_code": "000017",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "dental_care",
+      "tier": 3,
+      "parent_id": "care_providers",
+      "name": "Dental Care",
+      "description": "Operates dental practices providing oral examinations or treatment.",
+      "exclusions": "Exclude dental equipment and practice software vendors.",
+      "industry_code": "000018",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "pharmaceuticals",
+      "tier": 2,
+      "parent_id": "healthcare",
+      "name": "Pharmaceuticals",
+      "description": "Develops or commercializes conventional medicines or broad medicine portfolios.",
+      "exclusions": "Dedicated cell/gene or biologics-platform developers belong to Biotechnology. Broad commercial portfolios take precedence over a single modality."
+    },
+    {
+      "id": "integrated_pharmaceuticals",
+      "tier": 3,
+      "parent_id": "pharmaceuticals",
+      "name": "Integrated Pharmaceuticals",
+      "description": "Combines drug research or development with a marketed portfolio of medicines or vaccines.",
+      "exclusions": "Exclude clinical-stage-only developers and generic-led suppliers.",
+      "industry_code": "000019",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "clinical_drug_development",
+      "tier": 3,
+      "parent_id": "pharmaceuticals",
+      "name": "Clinical Drug Development",
+      "description": "Owns or licenses therapeutic candidates and advances them through clinical development.",
+      "exclusions": "Exclude established broad commercial portfolios, pure research contractors, and dedicated cell/gene or biologics platforms.",
+      "industry_code": "000020",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "generic_medicines",
+      "tier": 3,
+      "parent_id": "pharmaceuticals",
+      "name": "Generic Medicines",
+      "description": "Primarily develops or supplies off-patent generic medicines.",
+      "exclusions": "Exclude branded discovery-led pharmaceutical companies.",
+      "industry_code": "000021",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "biotechnology",
+      "tier": 2,
+      "parent_id": "healthcare",
+      "name": "Biotechnology",
+      "description": "Develops dedicated biological therapeutic modalities or biological research products.",
+      "exclusions": "The word biotech alone is insufficient. Broad marketed medicine portfolios belong to Pharmaceuticals."
+    },
+    {
+      "id": "cell_gene_therapies",
+      "tier": 3,
+      "parent_id": "biotechnology",
+      "name": "Cell and Gene Therapies",
+      "description": "Develops treatments based on engineered cells or genetic modification.",
+      "exclusions": "Exclude conventional drug programs and research-only reagents.",
+      "industry_code": "000022",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "biologic_therapeutics",
+      "tier": 3,
+      "parent_id": "biotechnology",
+      "name": "Biologic Therapeutics",
+      "description": "Specializes in therapeutic antibodies, proteins, or other biologic platforms.",
+      "exclusions": "Exclude cell/gene therapies and diversified commercial pharma.",
+      "industry_code": "000023",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "research_tools_reagents",
+      "tier": 3,
+      "parent_id": "biotechnology",
+      "name": "Research Tools and Reagents",
+      "description": "Supplies biological reagents, assays, or laboratory research tools to researchers.",
+      "exclusions": "Exclude clinical diagnostic services and therapeutic developers.",
+      "industry_code": "000024",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "medical_devices",
+      "tier": 2,
+      "parent_id": "healthcare",
+      "name": "Medical Devices",
+      "description": "Develops physical equipment or devices used in patient diagnosis or treatment.",
+      "exclusions": "Standalone diagnostic service providers belong to Diagnostics."
+    },
+    {
+      "id": "surgical_devices",
+      "tier": 3,
+      "parent_id": "medical_devices",
+      "name": "Surgical Devices",
+      "description": "Produces instruments, implants, or systems used in surgical procedures.",
+      "exclusions": "Exclude diagnostic imaging and non-surgical monitoring.",
+      "industry_code": "000025",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "imaging_equipment",
+      "tier": 3,
+      "parent_id": "medical_devices",
+      "name": "Imaging Equipment",
+      "description": "Produces medical imaging systems such as MRI, CT, or ultrasound equipment.",
+      "exclusions": "Exclude imaging service operators.",
+      "industry_code": "000026",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "monitoring_devices",
+      "tier": 3,
+      "parent_id": "medical_devices",
+      "name": "Monitoring and Therapeutic Devices",
+      "description": "Produces non-surgical patient monitoring or therapeutic support devices.",
+      "exclusions": "Exclude imaging equipment and surgical systems.",
+      "industry_code": "000027",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "diagnostics",
+      "tier": 2,
+      "parent_id": "healthcare",
+      "name": "Diagnostics",
+      "description": "Provides diagnostic testing services using samples or medical imaging.",
+      "exclusions": "Equipment manufacturers belong to Medical Devices."
+    },
+    {
+      "id": "clinical_laboratories",
+      "tier": 3,
+      "parent_id": "diagnostics",
+      "name": "Clinical Laboratories",
+      "description": "Performs routine or broad clinical testing on patient samples.",
+      "exclusions": "Dedicated genetic testing belongs to Molecular Diagnostics.",
+      "industry_code": "000028",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "molecular_diagnostics",
+      "tier": 3,
+      "parent_id": "diagnostics",
+      "name": "Molecular Diagnostics",
+      "description": "Specializes in genetic or molecular diagnostic testing services.",
+      "exclusions": "Exclude research-only reagents and general clinical laboratories.",
+      "industry_code": "000029",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "diagnostic_imaging_services",
+      "tier": 3,
+      "parent_id": "diagnostics",
+      "name": "Diagnostic Imaging Services",
+      "description": "Operates facilities providing diagnostic imaging examinations.",
+      "exclusions": "Exclude imaging equipment manufacturers and general hospitals.",
+      "industry_code": "000030",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "aerospace_defense",
+      "tier": 2,
+      "parent_id": "industrials",
+      "name": "Aerospace and Defense",
+      "description": "Develops aircraft, defense equipment, or space systems.",
+      "exclusions": "Airline operations belong to Transportation and Logistics."
+    },
+    {
+      "id": "commercial_aircraft",
+      "tier": 3,
+      "parent_id": "aerospace_defense",
+      "name": "Commercial Aircraft",
+      "description": "Develops or manufactures complete civilian aircraft, including pre-commercial developers.",
+      "exclusions": "Integrated firms explicitly spanning commercial aircraft, defense, and space belong to Diversified Aerospace and Defense.",
+      "industry_code": "000031",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "defense_space_systems",
+      "tier": 3,
+      "parent_id": "aerospace_defense",
+      "name": "Defense and Space Systems",
+      "description": "Primarily develops military platforms, defense equipment, satellites, or space launch systems.",
+      "exclusions": "Exclude civilian aircraft-led companies and diversified aerospace groups.",
+      "industry_code": "000032",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "diversified_aerospace_defense",
+      "tier": 3,
+      "parent_id": "aerospace_defense",
+      "name": "Diversified Aerospace and Defense",
+      "description": "Explicitly operates both commercial aircraft and substantial defense or space businesses.",
+      "exclusions": "Do not use for an aircraft startup with a single civilian product program.",
+      "industry_code": "000033",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "machinery",
+      "tier": 2,
+      "parent_id": "industrials",
+      "name": "Machinery",
+      "description": "Produces mechanical equipment for industrial or agricultural work.",
+      "exclusions": "Electrical power equipment belongs to Electrical Equipment."
+    },
+    {
+      "id": "industrial_machinery",
+      "tier": 3,
+      "parent_id": "machinery",
+      "name": "Industrial Machinery",
+      "description": "Produces factory, process, or production machinery.",
+      "exclusions": "Exclude farm machinery and construction/mining equipment.",
+      "industry_code": "000034",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "agricultural_machinery",
+      "tier": 3,
+      "parent_id": "machinery",
+      "name": "Agricultural Machinery",
+      "description": "Produces tractors, harvesting systems, or other agricultural machinery.",
+      "exclusions": "Exclude farm software and consumer garden products.",
+      "industry_code": "000035",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "construction_mining_equipment",
+      "tier": 3,
+      "parent_id": "machinery",
+      "name": "Construction and Mining Equipment",
+      "description": "Produces excavators, loaders, mining machinery, or related heavy equipment.",
+      "exclusions": "Exclude construction contractors and industrial factory machinery.",
+      "industry_code": "000036",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "electrical_equipment",
+      "tier": 2,
+      "parent_id": "industrials",
+      "name": "Electrical Equipment",
+      "description": "Produces equipment for electrical power, control, or storage.",
+      "exclusions": "Exclude semiconductor chips and general computing hardware."
+    },
+    {
+      "id": "power_equipment",
+      "tier": 3,
+      "parent_id": "electrical_equipment",
+      "name": "Power Distribution Equipment",
+      "description": "Produces transformers, switchgear, or electrical distribution equipment.",
+      "exclusions": "Exclude batteries and industrial control systems.",
+      "industry_code": "000037",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "industrial_controls",
+      "tier": 3,
+      "parent_id": "electrical_equipment",
+      "name": "Industrial Controls",
+      "description": "Produces industrial automation controls, drives, or control hardware.",
+      "exclusions": "Exclude software-only vendors and semiconductor components.",
+      "industry_code": "000038",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "batteries_storage",
+      "tier": 3,
+      "parent_id": "electrical_equipment",
+      "name": "Batteries and Energy Storage",
+      "description": "Produces batteries or integrated electrical energy storage systems.",
+      "exclusions": "Exclude power generation utilities and storage software-only suppliers.",
+      "industry_code": "000039",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "construction_engineering",
+      "tier": 2,
+      "parent_id": "industrials",
+      "name": "Construction and Engineering",
+      "description": "Delivers built-environment construction or engineering services.",
+      "exclusions": "Exclude equipment manufacturers and property-only investment firms."
+    },
+    {
+      "id": "building_construction",
+      "tier": 3,
+      "parent_id": "construction_engineering",
+      "name": "Building Construction",
+      "description": "Constructs residential or commercial buildings.",
+      "exclusions": "Exclude civil infrastructure and design-only engineering.",
+      "industry_code": "000040",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "civil_infrastructure",
+      "tier": 3,
+      "parent_id": "construction_engineering",
+      "name": "Civil Infrastructure Construction",
+      "description": "Constructs roads, bridges, utilities, or other civil infrastructure.",
+      "exclusions": "Exclude building construction and design-only consulting.",
+      "industry_code": "000041",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "engineering_services",
+      "tier": 3,
+      "parent_id": "construction_engineering",
+      "name": "Engineering and Design Services",
+      "description": "Provides engineering design, planning, or technical consultancy for physical projects.",
+      "exclusions": "Exclude IT consulting and contractors primarily executing construction.",
+      "industry_code": "000042",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "transportation_logistics",
+      "tier": 2,
+      "parent_id": "industrials",
+      "name": "Transportation and Logistics",
+      "description": "Moves passengers or goods or coordinates logistics.",
+      "exclusions": "Exclude vehicle and aircraft manufacturers."
+    },
+    {
+      "id": "passenger_transport",
+      "tier": 3,
+      "parent_id": "transportation_logistics",
+      "name": "Passenger Transportation",
+      "description": "Operates transportation services for passengers.",
+      "exclusions": "Exclude freight transport, booking-only platforms, and hotels.",
+      "industry_code": "000043",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "freight_transport",
+      "tier": 3,
+      "parent_id": "transportation_logistics",
+      "name": "Freight Transportation",
+      "description": "Primarily operates vehicles, aircraft, ships, or rail assets to transport goods.",
+      "exclusions": "Exclude coordination-only freight forwarders and warehouse-led services.",
+      "industry_code": "000044",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "logistics_warehousing",
+      "tier": 3,
+      "parent_id": "transportation_logistics",
+      "name": "Logistics and Warehousing",
+      "description": "Primarily coordinates freight, fulfillment, storage, or supply-chain services.",
+      "exclusions": "Exclude businesses primarily operating line-haul transportation assets.",
+      "industry_code": "000045",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "food",
+      "tier": 2,
+      "parent_id": "consumer_goods",
+      "name": "Food",
+      "description": "Develops, produces, or markets edible food products.",
+      "exclusions": "Exclude beverages, restaurants, and retailers merely reselling food."
+    },
+    {
+      "id": "packaged_foods",
+      "tier": 3,
+      "parent_id": "food",
+      "name": "Packaged Foods",
+      "description": "Supplies prepared meals, pantry staples, or mixed packaged food portfolios.",
+      "exclusions": "Specialist snacks/confectionery and dairy/alternatives use their dedicated categories.",
+      "industry_code": "000046",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "snacks_confectionery",
+      "tier": 3,
+      "parent_id": "food",
+      "name": "Snacks and Confectionery",
+      "description": "Specializes in snack foods, candy, or confectionery.",
+      "exclusions": "Exclude broad mixed food portfolios.",
+      "industry_code": "000047",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "dairy_alternative_foods",
+      "tier": 3,
+      "parent_id": "food",
+      "name": "Dairy and Alternative Foods",
+      "description": "Specializes in dairy foods or plant-based food substitutes.",
+      "exclusions": "Packaged drinks belong to Beverages; exclude broad mixed food portfolios.",
+      "industry_code": "000048",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "beverages",
+      "tier": 2,
+      "parent_id": "consumer_goods",
+      "name": "Beverages",
+      "description": "Develops, produces, or markets packaged drinks or beverage brands.",
+      "exclusions": "Exclude beverage equipment and third-party-only retailers."
+    },
+    {
+      "id": "nonalcoholic_beverages",
+      "tier": 3,
+      "parent_id": "beverages",
+      "name": "Nonalcoholic Beverages",
+      "description": "Supplies nonalcoholic drinks including water, soft drinks, ready-to-drink tea, coffee, or energy drinks.",
+      "exclusions": "Exclude alcoholic drinks and dry coffee/tea specialists without a ready-to-drink focus.",
+      "industry_code": "000049",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "alcoholic_beverages",
+      "tier": 3,
+      "parent_id": "beverages",
+      "name": "Alcoholic Beverages",
+      "description": "Primarily supplies beer, wine, spirits, or other alcoholic drinks.",
+      "exclusions": "Exclude nonalcoholic-focused portfolios.",
+      "industry_code": "000050",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "coffee_tea_products",
+      "tier": 3,
+      "parent_id": "beverages",
+      "name": "Coffee and Tea Products",
+      "description": "Specializes in roasted coffee, beans, ground coffee, or dry tea products for preparation.",
+      "exclusions": "Exclude cafes and ready-to-drink beverage-focused brands.",
+      "industry_code": "000051",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "apparel_footwear",
+      "tier": 2,
+      "parent_id": "consumer_goods",
+      "name": "Apparel and Footwear",
+      "description": "Develops or markets clothing, footwear, or personal accessories.",
+      "exclusions": "Exclude retailers only reselling third-party brands."
+    },
+    {
+      "id": "apparel",
+      "tier": 3,
+      "parent_id": "apparel_footwear",
+      "name": "Apparel",
+      "description": "Primarily supplies clothing or garments.",
+      "exclusions": "Exclude footwear-led and accessory-led brands.",
+      "industry_code": "000052",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "footwear",
+      "tier": 3,
+      "parent_id": "apparel_footwear",
+      "name": "Footwear",
+      "description": "Primarily supplies shoes or other footwear.",
+      "exclusions": "Exclude apparel-led portfolios.",
+      "industry_code": "000053",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "accessories",
+      "tier": 3,
+      "parent_id": "apparel_footwear",
+      "name": "Accessories and Bags",
+      "description": "Primarily supplies bags, luggage, belts, or fashion accessories.",
+      "exclusions": "Exclude clothing-led and footwear-led brands.",
+      "industry_code": "000054",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "household_products",
+      "tier": 2,
+      "parent_id": "consumer_goods",
+      "name": "Household Products",
+      "description": "Supplies products for household furnishing, maintenance, or use.",
+      "exclusions": "Exclude personal care and beauty products."
+    },
+    {
+      "id": "home_furnishings",
+      "tier": 3,
+      "parent_id": "household_products",
+      "name": "Home Furnishings",
+      "description": "Supplies furniture, home textiles, or decorative household items.",
+      "exclusions": "Exclude powered appliances and cleaning products.",
+      "industry_code": "000055",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "household_appliances",
+      "tier": 3,
+      "parent_id": "household_products",
+      "name": "Household Appliances",
+      "description": "Supplies powered appliances for domestic tasks.",
+      "exclusions": "Exclude computing hardware and industrial equipment.",
+      "industry_code": "000056",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "household_cleaning",
+      "tier": 3,
+      "parent_id": "household_products",
+      "name": "Household Cleaning Products",
+      "description": "Supplies household detergents, cleaners, or cleaning consumables.",
+      "exclusions": "Exclude personal hygiene and industrial cleaning services.",
+      "industry_code": "000057",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "personal_care_beauty",
+      "tier": 2,
+      "parent_id": "consumer_goods",
+      "name": "Personal Care and Beauty",
+      "description": "Supplies non-prescription personal care, hygiene, or cosmetic products.",
+      "exclusions": "Exclude therapeutic medicines."
+    },
+    {
+      "id": "skincare_cosmetics",
+      "tier": 3,
+      "parent_id": "personal_care_beauty",
+      "name": "Skincare and Cosmetics",
+      "description": "Primarily supplies skincare or cosmetic products.",
+      "exclusions": "Exclude prescription treatments, haircare-led, and hygiene-led portfolios.",
+      "industry_code": "000058",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "haircare",
+      "tier": 3,
+      "parent_id": "personal_care_beauty",
+      "name": "Haircare",
+      "description": "Primarily supplies hair cleaning, conditioning, coloring, or styling products.",
+      "exclusions": "Exclude salon services and general cosmetics-led portfolios.",
+      "industry_code": "000059",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "personal_hygiene",
+      "tier": 3,
+      "parent_id": "personal_care_beauty",
+      "name": "Personal Hygiene",
+      "description": "Primarily supplies oral care, deodorants, or personal hygiene consumables.",
+      "exclusions": "Exclude household cleaners and cosmetic-led products.",
+      "industry_code": "000060",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "software",
+      "tier": 2,
+      "parent_id": "technology",
+      "name": "Software",
+      "description": "Develops and supplies reusable application or security software to external users.",
+      "exclusions": "Dedicated payment platforms belong to Financial Services; hosted computing capacity belongs to Cloud and Data Infrastructure. For a whole company with multiple substantial technology businesses and no supported single primary specialist activity, use the applicable Diversified Technology path. A matching division alone does not justify this category for the whole company."
+    },
+    {
+      "id": "crm_software",
+      "tier": 3,
+      "parent_id": "software",
+      "name": "Customer Relationship Software",
+      "description": "Primarily supports sales, customer service, marketing, or customer relationship workflows.",
+      "exclusions": "Exclude product development planning and security software.",
+      "industry_code": "000061",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "work_management_software",
+      "tier": 3,
+      "parent_id": "software",
+      "name": "Work and Product Management Software",
+      "description": "Primarily supports project planning, issue tracking, collaboration, or product development coordination.",
+      "exclusions": "Exclude CRM-led and security-focused products.",
+      "industry_code": "000062",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "cybersecurity_software",
+      "tier": 3,
+      "parent_id": "software",
+      "name": "Cybersecurity Software",
+      "description": "Primarily supplies software protecting systems, identities, networks, or data.",
+      "exclusions": "Exclude managed IT services and generic project tools.",
+      "industry_code": "000063",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "computing_hardware",
+      "tier": 2,
+      "parent_id": "technology",
+      "name": "Computing Hardware",
+      "description": "Develops or supplies physical computing devices or systems.",
+      "exclusions": "Exclude semiconductor components and non-computing household appliances. For a whole company with multiple substantial technology businesses and no supported single primary specialist activity, use the applicable Diversified Technology path. A matching division alone does not justify this category for the whole company."
+    },
+    {
+      "id": "personal_computing_devices",
+      "tier": 3,
+      "parent_id": "computing_hardware",
+      "name": "Personal Computing Devices",
+      "description": "Supplies computers, tablets, or personal computing endpoints.",
+      "exclusions": "Exclude server-led and network-equipment-led businesses.",
+      "industry_code": "000064",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "servers_storage",
+      "tier": 3,
+      "parent_id": "computing_hardware",
+      "name": "Servers and Storage Hardware",
+      "description": "Supplies server systems or physical data-storage equipment.",
+      "exclusions": "Exclude rented cloud capacity and semiconductor-only products.",
+      "industry_code": "000065",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "network_equipment",
+      "tier": 3,
+      "parent_id": "computing_hardware",
+      "name": "Network Equipment",
+      "description": "Supplies physical routers, switches, or networking systems.",
+      "exclusions": "Exclude telecom operators and software-only security tools.",
+      "industry_code": "000066",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "semiconductors",
+      "tier": 2,
+      "parent_id": "technology",
+      "name": "Semiconductors",
+      "description": "Designs or manufactures semiconductor chips or equipment for chip production.",
+      "exclusions": "Exclude complete computing systems. For a whole company with multiple substantial technology businesses and no supported single primary specialist activity, use the applicable Diversified Technology path. A matching division alone does not justify this category for the whole company."
+    },
+    {
+      "id": "chip_design",
+      "tier": 3,
+      "parent_id": "semiconductors",
+      "name": "Fabless Chip Design",
+      "description": "Designs semiconductor chips while outsourcing wafer fabrication.",
+      "exclusions": "Exclude foundries and integrated chip manufacturers.",
+      "industry_code": "000067",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "chip_manufacturing",
+      "tier": 3,
+      "parent_id": "semiconductors",
+      "name": "Chip Manufacturing",
+      "description": "Fabricates semiconductor wafers or chips, including foundries and integrated manufacturers.",
+      "exclusions": "Exclude fabless designers and equipment suppliers.",
+      "industry_code": "000068",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "semiconductor_equipment",
+      "tier": 3,
+      "parent_id": "semiconductors",
+      "name": "Semiconductor Equipment",
+      "description": "Supplies machinery or process equipment for semiconductor fabrication.",
+      "exclusions": "Exclude chip manufacturers and general industrial machinery.",
+      "industry_code": "000069",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "it_services",
+      "tier": 2,
+      "parent_id": "technology",
+      "name": "IT Services",
+      "description": "Provides labor- or service-led implementation, development, or management of IT systems.",
+      "exclusions": "Reusable product-led software belongs to Software. For a whole company with multiple substantial technology businesses and no supported single primary specialist activity, use the applicable Diversified Technology path. A matching division alone does not justify this category for the whole company."
+    },
+    {
+      "id": "it_consulting",
+      "tier": 3,
+      "parent_id": "it_services",
+      "name": "IT Consulting and Integration",
+      "description": "Advises on or integrates enterprise IT systems.",
+      "exclusions": "Exclude bespoke development-led and ongoing managed-operations-led firms.",
+      "industry_code": "000070",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "custom_software_development",
+      "tier": 3,
+      "parent_id": "it_services",
+      "name": "Custom Software Development",
+      "description": "Builds bespoke software for individual client requirements.",
+      "exclusions": "Exclude reusable software products and general integration consulting.",
+      "industry_code": "000071",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "managed_it_services",
+      "tier": 3,
+      "parent_id": "it_services",
+      "name": "Managed IT Services",
+      "description": "Provides ongoing operation, support, or management of customer IT environments.",
+      "exclusions": "Exclude self-service cloud infrastructure and project-only consulting.",
+      "industry_code": "000072",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "cloud_data_infrastructure",
+      "tier": 2,
+      "parent_id": "technology",
+      "name": "Cloud and Data Infrastructure",
+      "description": "Supplies hosted computing, storage, data platforms, or data-center capacity.",
+      "exclusions": "Running an application in the cloud does not make it infrastructure. For a whole company with multiple substantial technology businesses and no supported single primary specialist activity, use the applicable Diversified Technology path. A matching division alone does not justify this category for the whole company."
+    },
+    {
+      "id": "cloud_compute",
+      "tier": 3,
+      "parent_id": "cloud_data_infrastructure",
+      "name": "Cloud Compute Infrastructure",
+      "description": "Rents general-purpose computing, storage, or networking resources as a service.",
+      "exclusions": "Exclude application SaaS and physical colocation-only operators.",
+      "industry_code": "000073",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "data_platforms",
+      "tier": 3,
+      "parent_id": "cloud_data_infrastructure",
+      "name": "Managed Data Platforms",
+      "description": "Provides managed database, warehouse, or data-processing infrastructure.",
+      "exclusions": "Exclude workflow applications and general-purpose compute providers.",
+      "industry_code": "000074",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "data_centers",
+      "tier": 3,
+      "parent_id": "cloud_data_infrastructure",
+      "name": "Data Centers and Colocation",
+      "description": "Operates facilities providing rack space, power, cooling, or colocation for computing equipment.",
+      "exclusions": "Exclude cloud software services without a facilities-led offering.",
+      "industry_code": "000075",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "diversified_technology",
+      "tier": 2,
+      "parent_id": "technology",
+      "name": "Diversified Technology",
+      "description": "Operates multiple substantial technology product or platform businesses at the company level, rather than a single specialist offering.",
+      "exclusions": "Do not use merely because a specialist sells multiple related products. Require evidence of distinct substantial businesses."
+    },
+    {
+      "id": "diversified_internet_platforms",
+      "tier": 3,
+      "parent_id": "diversified_technology",
+      "name": "Diversified Internet Platforms",
+      "description": "Operates a broad consumer internet ecosystem spanning search, digital content or media, advertising, and additional technology platforms such as cloud services. Evidence describes multiple substantial businesses of the target as a whole.",
+      "exclusions": "Exclude standalone cloud providers and enterprise software ecosystems without a substantial consumer internet and advertising business. Do not classify the whole ecosystem solely as cloud compute.",
+      "industry_code": "000076",
+      "industry_code_status": "fixed_mapping"
+    },
+    {
+      "id": "diversified_enterprise_technology",
+      "tier": 3,
+      "parent_id": "diversified_technology",
+      "name": "Diversified Software and Computing Platforms",
+      "description": "Operates a broad software and computing ecosystem spanning operating systems or productivity applications, cloud infrastructure, and additional businesses such as devices or gaming. Evidence describes multiple substantial businesses of the target as a whole.",
+      "exclusions": "Exclude specialist application vendors, standalone cloud providers, and ecosystems primarily organized around consumer internet search, media, and advertising.",
+      "industry_code": "000077",
+      "industry_code_status": "fixed_mapping"
+    }
+  ]
+}

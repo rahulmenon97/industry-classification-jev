@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img">
+<title>Mode dropping: a conceptual illustration</title>
+<rect width="1200" height="600" fill="#f8faf9"/>
+<text x="40" y="52" font-family="Arial,sans-serif" font-size="30" fill="#244943" font-weight="700">Mode dropping: a conceptual illustration</text>
+<text x="40" y="86" font-family="Arial,sans-serif" font-size="18" fill="#244943" font-weight="400">A broader distribution compared with one concentrated on fewer response patterns.</text>
+<text x="40" y="117" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">Illustrative values only — not measured model outputs or a benchmark.</text>
+<text x="60" y="175" font-family="Arial,sans-serif" font-size="23" fill="#244943" font-weight="700">Broader response distribution</text>
+<path d="M60 220 V445 H530" fill="none" stroke="#77968d" stroke-width="2"/>
+<rect x="87" y="412.6" width="45" height="32.4" rx="4" fill="#95b8ad"/>
+<text x="100" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">A</text>
+<rect x="159" y="393.7" width="45" height="51.3" rx="4" fill="#95b8ad"/>
+<text x="172" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">B</text>
+<rect x="231" y="380.2" width="45" height="64.8" rx="4" fill="#95b8ad"/>
+<text x="244" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">C</text>
+<rect x="303" y="388.3" width="45" height="56.699999999999996" rx="4" fill="#95b8ad"/>
+<text x="316" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">D</text>
+<rect x="375" y="404.5" width="45" height="40.5" rx="4" fill="#95b8ad"/>
+<text x="388" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">E</text>
+<rect x="447" y="420.7" width="45" height="24.3" rx="4" fill="#95b8ad"/>
+<text x="460" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">F</text>
+<text x="180" y="510" font-family="Arial,sans-serif" font-size="18" fill="#244943" font-weight="400">Possible response patterns</text>
+<text x="660" y="175" font-family="Arial,sans-serif" font-size="23" fill="#244943" font-weight="700">More concentrated distribution</text>
+<path d="M660 220 V445 H1130" fill="none" stroke="#77968d" stroke-width="2"/>
+<rect x="687" y="439.6" width="45" height="5.4" rx="4" fill="#95b8ad"/>
+<text x="700" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">A</text>
+<rect x="759" y="431.5" width="45" height="13.5" rx="4" fill="#95b8ad"/>
+<text x="772" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">B</text>
+<rect x="831" y="412.6" width="45" height="32.4" rx="4" fill="#95b8ad"/>
+<text x="844" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">C</text>
+<rect x="903" y="256.0" width="45" height="189.0" rx="4" fill="#2e806b"/>
+<text x="916" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">D</text>
+<rect x="975" y="423.4" width="45" height="21.6" rx="4" fill="#95b8ad"/>
+<text x="988" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">E</text>
+<rect x="1047" y="436.9" width="45" height="8.1" rx="4" fill="#95b8ad"/>
+<text x="1060" y="474" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">F</text>
+<text x="780" y="510" font-family="Arial,sans-serif" font-size="18" fill="#244943" font-weight="400">Possible response patterns</text>
+<text x="40" y="558" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">Adapted from TypeSafe’s discussion of preference training and mode dropping.</text>
+</svg>

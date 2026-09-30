@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Industry Explorer</title><link rel="stylesheet" href="/static/style.css"><script defer src="/static/app.js"></script></head>
+<body><main>
+<section class="intro"><h1>From company name to industry evidence.</h1><p>Find the company, inspect its business, and trace its classification.</p></section>
+<form id="form"><label for="company">Company name</label><div class="search"><input id="company" placeholder="e.g. Linear" minlength="2" maxlength="160" required autocomplete="organization"><button id="submit">Classify company ↗</button></div></form>
+<p id="status" role="status" aria-live="polite"></p><div class="layout"><section id="result"><div class="empty"><h2>Your next company, explained.</h2><p>Enter a name to see source evidence, its industry path, and a breakdown of confidence, time, and estimated cost.</p></div></section><aside><h2>Saved runs</h2><div id="history"></div><button id="more" class="secondary" hidden>Load more</button></aside></div><footer>Classification confidence is not measured accuracy. industry values are synthetic placeholders. Costs are estimates.</footer></main></body></html>

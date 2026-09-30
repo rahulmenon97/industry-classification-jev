@@ -1,0 +1,7 @@
+{
+  "state": "These headphones are not what I expected. What can you do for me?",
+  "questions": {
+    "resolution": {"type": "choice", "instructions": "Which resolution does the customer explicitly request?", "criteria": {"replacement": "Explicitly asks for another item", "refund": "Explicitly asks for money back", "troubleshooting": "Explicitly requests help making it work", "other": "No clear resolution requested, or something else"}},
+    "reports_damage": {"type": "noul", "instructions": "Does the customer report physical damage or breakage? Dissatisfaction alone does not count."}
+  }
+}

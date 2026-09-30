@@ -1,0 +1,7 @@
+{
+  "state": {"query": "How do I change my password?", "passage": "Open Settings, select Security, and choose Change password. Enter your current password, then your new password."},
+  "questions": {
+    "answers_query": {"type": "noul", "instructions": "Does the passage contain instructions that answer the query?"},
+    "relevance": {"type": "score", "instructions": "How useful is the passage for answering the query?", "criteria": ["Unrelated to the query", "Related but missing the requested instructions", "Directly provides the requested instructions"]}
+  }
+}

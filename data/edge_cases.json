@@ -1,0 +1,20 @@
+[
+  {
+    "case_id": "edge_vague",
+    "description": "We deliver innovative solutions that help our customers succeed.",
+    "expected_choice": "insufficient_evidence",
+    "synthetic": true
+  },
+  {
+    "case_id": "edge_hotel",
+    "description": "The business owns and operates hotels, renting guest rooms to travelers and providing housekeeping and reception services.",
+    "expected_choice": "outside_taxonomy",
+    "synthetic": true
+  },
+  {
+    "case_id": "edge_ai_drug_developer",
+    "description": "The company acquires therapeutic drug candidates and advances its own clinical-stage treatment programs. Its internal AI tools help design and manage drug trials; it does not sell those tools to other businesses.",
+    "expected_choice": "clinical_drug_development",
+    "synthetic": true
+  }
+]

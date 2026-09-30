@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img">
+<title>Three post-training approaches</title>
+<rect width="1200" height="600" fill="#f8faf9"/>
+<text x="40" y="52" font-family="Arial,sans-serif" font-size="30" fill="#244943" font-weight="700">Three post-training approaches</text>
+<text x="40" y="86" font-family="Arial,sans-serif" font-size="17" fill="#244943" font-weight="400">Conceptual recreation based on TypeSafe’s AI primer — not an internal model architecture.</text>
+<rect x="390" y="125" width="420" height="75" rx="14" fill="#e7efed" stroke="#bacdc7"/>
+<text x="425" y="172" font-family="Arial,sans-serif" font-size="25" fill="#244943" font-weight="700">Pretrained language model</text>
+<path d="M600 200 V245 H210 V285" fill="none" stroke="#77968d" stroke-width="3"/>
+<rect x="40" y="285" width="340" height="205" rx="14" fill="#e7efed" stroke="#bacdc7"/>
+<text x="64" y="325" font-family="Arial,sans-serif" font-size="28" fill="#244943" font-weight="700">RLHF</text>
+<text x="64" y="362" font-family="Arial,sans-serif" font-size="20" fill="#244943" font-weight="400">Reinforcement learning</text>
+<text x="64" y="389" font-family="Arial,sans-serif" font-size="20" fill="#244943" font-weight="400">from human feedback</text>
+<text x="64" y="452" font-family="Arial,sans-serif" font-size="19" fill="#244943" font-weight="700">Human-preferred responses</text>
+<path d="M600 200 V245 H600 V285" fill="none" stroke="#77968d" stroke-width="3"/>
+<rect x="430" y="285" width="340" height="205" rx="14" fill="#e7efed" stroke="#bacdc7"/>
+<text x="454" y="325" font-family="Arial,sans-serif" font-size="28" fill="#244943" font-weight="700">RLVR</text>
+<text x="454" y="362" font-family="Arial,sans-serif" font-size="20" fill="#244943" font-weight="400">Reinforcement learning</text>
+<text x="454" y="389" font-family="Arial,sans-serif" font-size="20" fill="#244943" font-weight="400">with verifiable rewards</text>
+<text x="454" y="452" font-family="Arial,sans-serif" font-size="19" fill="#244943" font-weight="700">Verifiable task outcomes</text>
+<path d="M600 200 V245 H990 V285" fill="none" stroke="#77968d" stroke-width="3"/>
+<rect x="820" y="285" width="340" height="205" rx="14" fill="#d7ece4" stroke="#bacdc7"/>
+<text x="844" y="325" font-family="Arial,sans-serif" font-size="28" fill="#244943" font-weight="700">RLCD</text>
+<text x="844" y="362" font-family="Arial,sans-serif" font-size="20" fill="#244943" font-weight="400">Reinforcement learning</text>
+<text x="844" y="389" font-family="Arial,sans-serif" font-size="20" fill="#244943" font-weight="400">for calibrated decisions</text>
+<text x="844" y="452" font-family="Arial,sans-serif" font-size="19" fill="#244943" font-weight="700">Decisions and probabilities</text>
+<text x="40" y="550" font-family="Arial,sans-serif" font-size="18" fill="#244943" font-weight="400">TypeSafe describes Jev’s training objective using the RLCD branch.</text>
+</svg>

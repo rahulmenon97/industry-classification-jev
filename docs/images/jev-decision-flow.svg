@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+<title id="title">From evidence to an application decision</title><desc id="desc">Two conceptual workflows; this does not depict proprietary model internals. Typed output constrains the answer space. Correctness still requires evaluation.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#667f88"/></marker></defs>
+<rect width="1200" height="560" fill="#f7faf9"/>
+<text x="40" y="48" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#163c38">From evidence to an application decision</text>
+<text x="40" y="80" font-family="Arial,sans-serif" font-size="17" fill="#48635f">Two conceptual workflows; this does not depict proprietary model internals.</text>
+<text x="40" y="125" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#48635f">GENERATIVE WORKFLOW</text>
+<rect x="40" y="140" width="340" height="115" rx="12" fill="#e4efec" stroke="#bfd3cb"/>
+<text x="58" y="172" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#163c38">Evidence + request</text>
+<text x="58" y="198" font-family="Arial,sans-serif" font-size="16" fill="#294c48">Company facts and a request</text>
+<text x="58" y="222" font-family="Arial,sans-serif" font-size="16" fill="#294c48">to write a new description</text>
+<path d="M386 198 H412" stroke="#667f88" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="420" y="140" width="340" height="115" rx="12" fill="#d4e9e2" stroke="#bfd3cb"/>
+<text x="438" y="172" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#163c38">Generative model</text>
+<text x="438" y="198" font-family="Arial,sans-serif" font-size="16" fill="#294c48">Produces a textual answer</text>
+<text x="438" y="222" font-family="Arial,sans-serif" font-size="16" fill="#294c48">or structured generated content</text>
+<path d="M766 198 H792" stroke="#667f88" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="800" y="140" width="340" height="115" rx="12" fill="#e7edf3" stroke="#bfd3cb"/>
+<text x="818" y="172" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#163c38">Application</text>
+<text x="818" y="198" font-family="Arial,sans-serif" font-size="16" fill="#294c48">Checks and uses the generated</text>
+<text x="818" y="222" font-family="Arial,sans-serif" font-size="16" fill="#294c48">content for its intended purpose</text>
+<text x="40" y="315" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#48635f">JEV WORKFLOW</text>
+<rect x="40" y="330" width="340" height="115" rx="12" fill="#e4efec" stroke="#bfd3cb"/>
+<text x="58" y="362" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#163c38">Evidence + defined options</text>
+<text x="58" y="388" font-family="Arial,sans-serif" font-size="16" fill="#294c48">Company description and</text>
+<text x="58" y="412" font-family="Arial,sans-serif" font-size="16" fill="#294c48">the allowed industry definitions</text>
+<path d="M386 388 H412" stroke="#667f88" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="420" y="330" width="340" height="115" rx="12" fill="#d4e9e2" stroke="#bfd3cb"/>
+<text x="438" y="362" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#163c38">Jev decision</text>
+<text x="438" y="388" font-family="Arial,sans-serif" font-size="16" fill="#294c48">Choice, Noul, or Score</text>
+<text x="438" y="412" font-family="Arial,sans-serif" font-size="16" fill="#294c48">with probabilistic output</text>
+<path d="M766 388 H792" stroke="#667f88" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="800" y="330" width="340" height="115" rx="12" fill="#e7edf3" stroke="#bfd3cb"/>
+<text x="818" y="362" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#163c38">Application code</text>
+<text x="818" y="388" font-family="Arial,sans-serif" font-size="16" fill="#294c48">Checks acceptance policy;</text>
+<text x="818" y="412" font-family="Arial,sans-serif" font-size="16" fill="#294c48">looks up parents and fixed code</text>
+<text x="40" y="535" font-family="Arial,sans-serif" font-size="16" fill="#48635f">Typed output constrains the answer space. Correctness still requires evaluation.</text></svg>

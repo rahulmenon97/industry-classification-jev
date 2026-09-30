@@ -1,0 +1,142 @@
+[
+  {
+    "case_id": "salesforce",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "technology",
+      "software",
+      "crm_software"
+    ],
+    "industry_code": "000061",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "linear",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "technology",
+      "software",
+      "work_management_software"
+    ],
+    "industry_code": "000062",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "boeing",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "industrials",
+      "aerospace_defense",
+      "diversified_aerospace_defense"
+    ],
+    "industry_code": "000033",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "boom",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "industrials",
+      "aerospace_defense",
+      "commercial_aircraft"
+    ],
+    "industry_code": "000031",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "coca_cola",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "consumer_goods",
+      "beverages",
+      "nonalcoholic_beverages"
+    ],
+    "industry_code": "000049",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "liquid_death",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "consumer_goods",
+      "beverages",
+      "nonalcoholic_beverages"
+    ],
+    "industry_code": "000049",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "visa",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "financial_services",
+      "payments",
+      "payment_networks"
+    ],
+    "industry_code": "000007",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "modern_treasury",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "financial_services",
+      "payments",
+      "payment_operations_platforms"
+    ],
+    "industry_code": "000009",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "pfizer",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "healthcare",
+      "pharmaceuticals",
+      "integrated_pharmaceuticals"
+    ],
+    "industry_code": "000019",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  },
+  {
+    "case_id": "formation_bio",
+    "expected_identity": "match",
+    "expected_evidence_sufficient": true,
+    "expected_path": [
+      "healthcare",
+      "pharmaceuticals",
+      "clinical_drug_development"
+    ],
+    "industry_code": "000020",
+    "industry_code_status": "fixed_mapping",
+    "label_status": "author_assigned_under_demo_taxonomy_not_independent_gold",
+    "rationale": "Best fit for the supplied curated description under v2 category boundaries."
+  }
+]

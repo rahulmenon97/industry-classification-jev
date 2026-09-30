@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+.python/
+__pycache__/
+*.pyc
+results/
+.DS_Store
+
+
+storage/
+.pytest_cache/
+
+.ruff_cache/
